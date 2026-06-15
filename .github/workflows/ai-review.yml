@@ -1,8 +1,9 @@
 name: AI Review
 
 on:
-  schedule:
-    - cron: '*/1 * * * *'
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
