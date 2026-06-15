@@ -11,9 +11,10 @@ client = genai.Client(
     api_key=GEMINI_API_KEY
 )
 
-print("Logged in as:", g.get_user().login)
 
-for repo in g.get_user().get_repos():
+
+for repo_name in ["Raveena0410/pr-review"]:
+    repo = g.get_repo(repo_name)
 
     print(f"Checking repository: {repo.name}")
 
