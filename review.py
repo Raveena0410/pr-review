@@ -13,12 +13,11 @@ client = genai.Client(
 
 
 
-for repo_name in ["Raveena0410/pr-review"]:
-    repo = g.get_repo(repo_name)
 
-    print(f"Checking repository: {repo.name}")
+repo_name = os.environ["GITHUB_REPOSITORY"]
+repo = g.get_repo(repo_name)
 
-    for pr in repo.get_pulls(state="open"):
+for pr in repo.get_pulls(state="open"):
 
         print(f"Checking PR #{pr.number}")
 
