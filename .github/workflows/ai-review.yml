@@ -1,8 +1,9 @@
 name: AI Review
 
 on:
-  pull_request:
-    types: [opened, synchronize, reopened]
+  schedule:
+    - cron: '*/1 * * * *'
+  workflow_dispatch:
 
 jobs:
   review:
